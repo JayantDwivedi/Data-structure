@@ -5,7 +5,7 @@ public class StackMain {
 
         int size = 5;
 
-        ArrayImplementation stack = new ArrayImplementation(size);
+        //ArrayImplementation stack = new ArrayImplementation(size);
         ListImplementation stacks = new ListImplementation();
 
        /* stack.push(10);
