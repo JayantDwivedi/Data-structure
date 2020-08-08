@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class Implementation {
+public class  Implementation {
 
     Node head = null;
 
