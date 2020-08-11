@@ -27,7 +27,7 @@ public class CountingSort {
         // change the count[i] now contain actual position of this character
         // in output array
         for (int i = 1; i <= 9; i++) {
-            count[i] = count[i - 1];
+            count[i] += count[i - 1];
         }
 
         // build output array
