@@ -89,6 +89,63 @@ public class ImplementationLinkedList {
         System.out.println(head.data + " --> ");
     }
 
+    /* In case of c and cpp there is no concept of garbage collector
+     so we need to delete linked list one by one but in case of java there is
+    a concept of garbage collector so we delete the entire list at a time
+     */
+    // delete the whole list
+    public void deleteWhole() {
+         head = null;
+    }
+
+    //(Iterative) count the length of the Linked List
+    public int findLength() {
+        Node1 temp = head;
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
+    // (Recursive) count the length of the linked list
+    public int findLengthRec(Node1 head) {
+        if (head == null) {
+            return 0;
+        }
+        else {
+            return 1 + findLengthRec(head.next);
+        }
+    }
+
+    /* Delete a particular node without using head node*/
+    public void delete(Node1 node) {
+        if (node.next == null) {
+            node = null;
+        }
+        else {
+            node.data = node.next.data;
+            node.next = node.next.next;
+        }
+    }
+
+    // print n the element from last of the linked list
+    public int nfromLast(int n) {
+        int len = findLength();
+        int nfront = len - n + 1;    // return the value from the front of the element
+        Node1 current = head;
+        int count = 1;
+        while (current != null) {
+            if (count == 0) {
+                return current.data;
+            }
+            count++;
+            current = current.next;
+        }
+        assert(false);
+        return 0;
+    }
     // end all the functions
     public static void main(String[] args) {
         ImplementationLinkedList obj = new ImplementationLinkedList();
@@ -102,6 +159,9 @@ public class ImplementationLinkedList {
         obj.display();
         obj.deleteEle(3);
         obj.display();
-
+        int n = obj.findLength();
+        System.out.println("Length of linked list :  " + n);
+        int lastData = obj.nfromLast(3);
+        System.out.println("Nth from the last " + lastData);
     }
 }
