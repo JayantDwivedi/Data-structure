@@ -41,4 +41,24 @@ public class Implementation<E> {
         }
         System.out.println();
     }
+
+    public void deleteLast() {
+        if (first == null) {
+            System.out.println("Linked List is Empty");
+        }
+        else {
+            last = last.previous;
+            last.next = null;
+        }
+    }
+
+    public void deleteFirst() {
+        if (first == null) {
+            System.out.println("Linked List is Empty");
+        }
+        else {
+            first = first.next;
+            first.previous = null;
+        }
+    }
 }

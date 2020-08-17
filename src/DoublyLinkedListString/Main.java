@@ -14,6 +14,9 @@ public class Main {
         obj.insertLast(10.34F);
         obj.insertLast(23L);
 
+        obj.deleteLast();
+        obj.deleteFirst();
+
 
         obj.display();
     }
