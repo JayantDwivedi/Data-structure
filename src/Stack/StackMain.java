@@ -24,13 +24,6 @@ public class StackMain {
 
 
         //stacks.pop();
-        //System.out.println(stacks.peek().getData());
-
-        stacks.display();
-
-
-
-
 
     }
 }

@@ -68,4 +68,21 @@ public class Implementation {
             traversePostOrder(node.getLeft());
         }
     }
+
+    // search an element
+    public void search(int key) {
+        TreeNode current = root;
+        while (current.getData() != key) {
+            if (key < current.getData()) {
+                current.setLeft(current);
+            }
+            else {
+                current.setRight(current);
+            }
+            if (current == null) {
+                System.out.println("Element not found");
+            }
+        }
+        System.out.println("Element found");
+    }
 }

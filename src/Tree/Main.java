@@ -19,7 +19,8 @@ public class Main {
             System.out.println("2.Traverse In-Order Traversal");
             System.out.println("3.Traverse Pre-Order Traversal");
             System.out.println("4.Traverse Post-Order Traversal");
-            System.out.println("5.Exit");
+            System.out.println("5.Search particular element");
+            System.out.println("6.Exit");
             System.out.println("*************************************");
             System.out.println("Choose Appropriate Case");
 
@@ -60,8 +61,14 @@ public class Main {
                     break;
                 }
 
-
                 case 5:{
+                    System.out.println("Enter the key element");
+                    int ele = scan.nextInt();
+                    tree.search(ele);
+                    break;
+                }
+
+                case 6:{
                     response = false;
                     break;
                 }
