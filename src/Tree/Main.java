@@ -20,7 +20,9 @@ public class Main {
             System.out.println("3.Traverse Pre-Order Traversal");
             System.out.println("4.Traverse Post-Order Traversal");
             System.out.println("5.Search particular element");
-            System.out.println("6.Exit");
+            System.out.println("6.Finding minimum element of Tree");
+            System.out.println("7.Finding maximum element of Tree");
+            System.out.println("8.Exit");
             System.out.println("*************************************");
             System.out.println("Choose Appropriate Case");
 
@@ -67,8 +69,20 @@ public class Main {
                     tree.search(ele);
                     break;
                 }
-
+                // i used these functions to find the maximum and minimum of the Binary search tree but
+                // it takes a infinite no of inputs when we call by using switch case
                 case 6:{
+                    int max = tree.minimum();
+                    System.out.println(max);
+                    break;
+                }
+                case 7:{
+                    int min = tree.maximum();
+                    System.out.println(min);
+                    break;
+                }
+
+                case 8:{
                     response = false;
                     break;
                 }

@@ -24,6 +24,8 @@ public class MyTreeMain {
         obj.inOrder(obj.getRoot());
         System.out.println();
 
+
+
         obj.search(7);
     }
 }

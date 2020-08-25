@@ -85,4 +85,22 @@ public class Implementation {
         }
         System.out.println("Element found");
     }
+
+    // finding the maximum element of tree
+    public int maximum() {
+        TreeNode current = root;
+        while (current != null) {
+            current.setRight(current);
+        }
+        return current.getData();
+    }
+
+    public int minimum()
+    {
+        TreeNode current = root;
+        while (current != null) {
+            current.setLeft(current);
+        }
+        return current.getData();
+    }
 }
