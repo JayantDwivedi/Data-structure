@@ -70,26 +70,36 @@ public class Implementation {
     }
 
     // search an element
-    public void search(int key) {
+    public boolean search(int key)
+    {
         TreeNode current = root;
-        while (current.getData() != key) {
-            if (key < current.getData()) {
-                current.setLeft(current);
+        boolean response = false;
+
+        while (current != null)
+        {
+            if (current.getData() < key)
+            {
+                current = current.getRight();
             }
-            else {
-                current.setRight(current);
+            else if (current.getData() > key)
+            {
+                current = current.getLeft();
             }
-            if (current == null) {
-                System.out.println("Element not found");
+            else
+            {
+                response = true;
+                break;
             }
+//            System.out.println(current.getData());
         }
-        System.out.println("Element found");
+        return response;
     }
 
     // finding the maximum element of tree
     public int maximum() {
         TreeNode current = root;
         while (current != null) {
+            current = current.getRight();
             current.setRight(current);
         }
         return current.getData();
@@ -102,5 +112,22 @@ public class Implementation {
             current.setLeft(current);
         }
         return current.getData();
+    }
+
+    // TRY TO UNDERSTAND GETTER
+    public void getterRight() {
+        TreeNode current = root;
+        current = current.getLeft().getRight().getRight();
+        System.out.println(current.getData());
+    }
+    public void getterLeft() {
+        System.out.println(root.getLeft().getData());
+    }
+
+    public void setterRight() {
+        TreeNode current = root;
+        System.out.println("Current without operation " + current.getData());
+        current.setRight(current);
+        System.out.println("Current after setRight " + current.getData());
     }
 }

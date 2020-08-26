@@ -13,81 +13,40 @@ public class Main {
 
         boolean response = true;
 
+        tree.insert(30);
+        tree.insert(20);
+        tree.insert(60);
+        tree.insert(10);
+        tree.insert(25);
+        tree.insert(50);
+        tree.insert(70);
 
-        do{
-            System.out.println("\n1.Create Tree");
-            System.out.println("2.Traverse In-Order Traversal");
-            System.out.println("3.Traverse Pre-Order Traversal");
-            System.out.println("4.Traverse Post-Order Traversal");
-            System.out.println("5.Search particular element");
-            System.out.println("6.Finding minimum element of Tree");
-            System.out.println("7.Finding maximum element of Tree");
-            System.out.println("8.Exit");
-            System.out.println("*************************************");
-            System.out.println("Choose Appropriate Case");
+        System.out.println("InOrder Traversal");
+        tree.traverseInOrder(tree.getRoot());
+        System.out.println();
 
-            int n = scan.nextInt();
-           // n = scan.nextInt();
-            switch (n)
-            {
+        System.out.println("Pre Order Traversal");
+        tree.traversePreOrder(tree.getRoot());
+        System.out.println();
 
+        System.out.println("Post Order Traversal");
+        tree.traversePostOrder(tree.getRoot());
+        System.out.println();
 
-                case 1 :
-                    {
-                    System.out.println("Enter the no. of element: ");
-                    int n1 = scan.nextInt();
-                    for(int i = 0; i < n1; i++){
-                        int data = scan.nextInt();
-                        tree.insert(data);
-                    }
-                    break;
-                }
+        System.out.println("Search the element Enter key");
+        int key = scan.nextInt();
+        System.out.println(tree.search(key)?"Match found" : "Not found");
+//        tree.search(70);
+//        System.out.println("Maximum Element");
+//        tree.maximum();
+//
+//        System.out.println("Minimum Element");
+//        tree.minimum();
 
-                case 2: {
-                    System.out.println("Your Result:");
-                    tree.traverseInOrder(tree.getRoot());
-                    break;
-                }
+//        tree.getterLeft();
+//        tree.getterRight();
+//
+//        tree.setterRight();
 
-
-                case 3:{
-                    System.out.println("Print Result PreOrder: ");
-                    tree.traversePreOrder(tree.getRoot());
-                    break;
-                }
-
-
-                case 4:{
-                    System.out.println("Print PostOrder: ");
-                    tree.traversePostOrder(tree.getRoot());
-                    break;
-                }
-
-                case 5:{
-                    System.out.println("Enter the key element");
-                    int ele = scan.nextInt();
-                    tree.search(ele);
-                    break;
-                }
-                // i used these functions to find the maximum and minimum of the Binary search tree but
-                // it takes a infinite no of inputs when we call by using switch case
-                case 6:{
-                    int max = tree.minimum();
-                    System.out.println(max);
-                    break;
-                }
-                case 7:{
-                    int min = tree.maximum();
-                    System.out.println(min);
-                    break;
-                }
-
-                case 8:{
-                    response = false;
-                    break;
-                }
-
-            }
-        }while(response);
     }
 }
