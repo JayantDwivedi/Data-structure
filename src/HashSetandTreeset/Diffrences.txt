@@ -1,0 +1,14 @@
+Hash Set uses hast table to store data.
+Hash set has O(1) time complexity for insert, remove, search.
+Hash Set is faster than Tree Set
+Hash set contains null object.
+Hash Set is an unordered Data structure
+Hash Set uses equal() method to compare two object in set and find duplicate.
+
+
+Tree Set uses tree map to store data
+Tree Set has O(logn) complexity
+Tree Set is slower than Hash Set
+Tree Set contains data in sorted order
+Tree Set does not contains null object
+Tree Set uses compareTo() method to compare the object between two sets.
