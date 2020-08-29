@@ -13,7 +13,7 @@ public class MainHash
         int akey, size, n, keysPerCall;
         System.out.print("Enter the size of Hash Table : ");
         size = scan.nextInt();
-        HashTable theHashTable = new HashTable(size);  // creating hash table object
+        HashTableLinerProbing theHashTable = new HashTableLinerProbing(size);  // creating hash table object
 
         for (int i = 20; i < 35; i++)
         {

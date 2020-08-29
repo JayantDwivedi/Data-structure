@@ -2,14 +2,14 @@ package Hash;
 
 import javax.xml.crypto.Data;
 
-public class HashTable {
+class HashTableLinerProbing {
     // three parameters
     private DataItem[] hashArray;
     private int arrSize;
     private DataItem nonItem;
 
     // constructor
-    public HashTable(int size) {
+    public HashTableLinerProbing(int size) {
         arrSize = size;                     // takes input of size of array
         hashArray = new DataItem[arrSize];  // create an array of size using dataitem
         nonItem = new DataItem(-1);      // make nonItem = -1;
