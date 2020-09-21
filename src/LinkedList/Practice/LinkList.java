@@ -1,9 +1,10 @@
 package LinkedList.Practice;
 
+import JARProcess.Hello;
+
 class LinkList {
 
     Node1 head = null;
-
     // insertion from beginning
     public void insert(int data) {
         Node1 node = new Node1(data);
@@ -40,5 +41,6 @@ class LinkList {
         llist.insertLast(6);
 
         llist.display();
+        Hello.print();
     }
 }
