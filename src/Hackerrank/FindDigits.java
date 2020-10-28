@@ -23,3 +23,8 @@ public class FindDigits {
         }
     }
 }
+
+/*
+ https://www.hackerrank.com/challenges/find-digits/problem
+ link to the problem statement
+*/
